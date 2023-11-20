@@ -5,16 +5,16 @@ import java.awt.image.BufferedImage;
 
 public class Entity {
     
-    int xPos;
-    int yPos;
-    int tileSize;
-    int velocity;
+    public int xPos;
+    public int yPos;
+    public int tileSize;
+    public int velocity;
     
-    BufferedImage[] upSprite, downSprite, leftSprite, rightSprite;
+    public BufferedImage[] upSprite, downSprite, leftSprite, rightSprite;
 
-    Rectangle rec;
+    public Rectangle rec;
     public boolean collider;
-    boolean isActive;
+    public boolean isActive;
 
     
 }

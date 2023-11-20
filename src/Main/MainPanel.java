@@ -7,6 +7,7 @@ import java.awt.Graphics2D;
 
 import javax.swing.JPanel;
 
+import src.Audio.AudioManager;
 import src.Entities.Player;
 import src.Listeners.KeyHandler;
 import src.Map.ColliderChecker;
@@ -28,11 +29,16 @@ public class MainPanel extends JPanel implements Runnable{
 
     //objetos, entidades e instancias
     Player player = new Player(this);
-    MapManager mapManager = new MapManager(this);
-    public KeyHandler kHandler = new KeyHandler();
-    public ColliderChecker coChecker = new ColliderChecker(this);
+    public MapManager mapManager;
+    public KeyHandler kHandler;
+    public ColliderChecker coChecker;
+    AudioManager mAudioManager = new AudioManager();
 
     public MainPanel(){
+        kHandler = new KeyHandler();
+        mapManager = new MapManager(this);
+        coChecker = new ColliderChecker(this, mapManager);
+
         this.setPreferredSize(new Dimension(screenWidht, screenHeight));
         this.setBackground(Color.black);   
         this.addKeyListener(kHandler);

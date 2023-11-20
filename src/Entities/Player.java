@@ -115,8 +115,7 @@ public class Player extends Entity {
     }
 
     public void updatePlayer() {
-
-        collider = false;
+        
         panel.coChecker.checkCollider(this);
 
         if (panel.kHandler.up == true) {
