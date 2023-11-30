@@ -10,7 +10,8 @@ public class Entity {
     public int tileSize;
     public int velocity;
     
-    public BufferedImage[] upSprite, downSprite, leftSprite, rightSprite;
+    BufferedImage[] upSprite, downSprite, leftSprite, rightSprite;
+    BufferedImage[] downIdle, upIdle, leftIdle, rightIdle;
 
     public Rectangle rec;
     public boolean collider;
